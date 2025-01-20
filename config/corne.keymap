@@ -73,13 +73,13 @@
 
 
 
-                text {
+                nav {
 // -----------------------------------------------------------------------------------------
 // | 1! |  @none |  3# |  4$ |  5% |     |    |  BWD_D    |  UP    |  FWD_D  |    |
 // | -_ |  =+ |  {  |  [  |  (  |     |    |  LEFT     |  DOWN  |  RIGHT  |    |
 // | `~ |     |     |  ,< |  :  |     |    |    | CTRL| META h |      |
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
-                        display-name = "text nav";
+                        display-name = "nav";
                         bindings = <
 
    &none         &none        &none        &none          &none         &trans       &kp BACKSPACE   &kp  UP     &kp RC(D)      &trans    
@@ -134,7 +134,7 @@
    &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT          &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP        &kp C_BRI_DN &kp C_BRI_UP 
    &bt BT_CLR   &trans       &trans       &trans       &trans             &kp C_PP    &kp C_PREV    &kp C_NEXT          &trans    &trans 
-                             &kp LGUI     &trans       &kp SPACE          AS(RET)   &kp ESC   &to 6
+                             &kp LGUI     &trans       &kp SPACE          AS(RET)   &to 6  &to 1
                         >;
                 };
 
