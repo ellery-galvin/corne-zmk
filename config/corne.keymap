@@ -99,7 +99,7 @@
                         bindings = <
 
    &none    &kp BACKSPACE   &kp  UP     &kp LG(D)      &mt KP_MINUS KP_PLUS           AS(LBKT)         AS(RBKT)         &kp LG(D)                  AS(BACKSLASH)    
-   &none    &kp LEFT        &kp DOWN    &kp RIGHT      &mt KP_SLASH KP_MULTIPLY       AS(KP_LPAR)      AS(KP_RPAR)      &kp &R_assign KP_EQUAL      AS(SLASH)  
+   &none    &kp LEFT        &kp DOWN    &kp RIGHT      &mt KP_SLASH KP_MULTIPLY       &kp KP_LPAR      KP_RPAR      &kp &R_assign KP_EQUAL         AS(SLASH)  
    &none    &none           &none       &none          &mt CARET PERCENT              &mt GT LT        AS(MINUS)        &mt AMPS DOLLAR            AS(GRAVE)  
                        &none     &none     &none       AS(RET)   &trans    &kp TAB
                         >;
