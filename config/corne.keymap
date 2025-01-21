@@ -27,6 +27,99 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_cmd {
+            timeout-ms = <20>;
+            key-positions = <33 34>;
+            bindings = <&sk LCMD>;
+        };
+
+        combo_ctrl {
+            timeout-ms = <20>;
+            key-positions = <32 35>;
+            bindings = <&sk LCTRL>;
+        };
+
+        combo_alt {
+            timeout-ms = <20>;
+            key-positions = <31 36>;
+            bindings = <&sk LALT>;
+        };
+
+        combo_cmd_shft {
+            timeout-ms = <20>;
+            key-positions = <33 30>;
+            bindings = <&sk LCMD  &sk RSHIFT>;
+        };
+
+        combo_shft_cmd {
+            timeout-ms = <20>;
+            key-positions = <21 34>;
+            bindings = <&sk LSHIFT  &sk RCMD >;
+        };
+
+        combo_cmd_ctrl {
+            timeout-ms = <20>;
+            key-positions = <33 35>;
+            bindings = <&sk LCMD  &sk RCTRL>;
+        };
+
+        combo_ctrl_cmd {
+            timeout-ms = <20>;
+            key-positions = <32 34>;
+            bindings = <&sk RCMD  &sk LCTRL>;
+        };
+
+        combo_cmd_alt {
+            timeout-ms = <20>;
+            key-positions = <33 36>;
+            bindings = <&sk LCMD  &sk RALT >;
+        };
+
+        combo_alt_cmd {
+            timeout-ms = <20>;
+            key-positions = <31 34>;
+            bindings = <&sk LALT  &sk RCMD >;
+        };
+
+        combo_ctrl_alt {
+            timeout-ms = <20>;
+            key-positions = <32 36>;
+            bindings = <&sk LCTRL  &sk RALT>;
+        };
+
+        combo_alt_ctrl {
+            timeout-ms = <20>;
+            key-positions = <31 35>;
+            bindings = <&sk LALT  &sk RCTRL>;
+        };
+
+        combo_ctrl_shft {
+            timeout-ms = <20>;
+            key-positions = <32 30>;
+            bindings = <&sk LCTRl  &sk RSHIFT>;
+        };
+
+        combo_shft_ctrl {
+            timeout-ms = <20>;
+            key-positions = <20 35>;
+            bindings = <&sk LSHIFT  &sk RCTRL>;
+        };
+
+        combo_alt_shft {
+            timeout-ms = <20>;
+            key-positions = <31 30>;
+            bindings = <&sk LALT  &sk RSHIFT>;
+        };
+
+        combo_shft_alt {
+            timeout-ms = <20>;
+            key-positions = <20 36>;
+            bindings = <&sk LSHIFt  &sk RALT>;
+        };
+    };
+
     macros {
 
         R_assign: R_assign {
@@ -49,9 +142,9 @@
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "dvorak";
                         bindings = <
-   AS(SQT)   &mt  QMARK COMMA      &mt KP_MINUS KP_DOT  AS(P) AS(Y)         AS(F)   AS(G)  AS(C)     AS(R)     AS(L)
-   AS(A)     AS(O)                 AS(E)                AS(U) AS(I)         AS(D)   AS(H)  AS(T)     AS(N)     AS(S)
-   AS(SEMI)  AS(Q)                 AS(J)                AS(K) AS(X)         AS(B)   AS(M)  AS(W)     AS(V)     AS(Z)
+   AS(SQT)          &mt  QMARK COMMA      &mt KP_MINUS KP_DOT  AS(P) AS(Y)         AS(F)   AS(G)  AS(C)     AS(R)     AS(L)
+   AS(A)            AS(O)                 AS(E)                AS(U) AS(I)         AS(D)   AS(H)  AS(T)     AS(N)     AS(S)
+   &mt LSHIFT SEMI  AS(Q)                 AS(J)                AS(K) AS(X)         AS(B)   AS(M)  AS(W)     AS(V)     &mt RSHIFT Z
                        &mt ESC LG(SPACE) &lt 4 LS(TAB)  &lt 3 SPACE         &lt 2 RET   &lt 5 TAB  &to 5
                         >;
                 };
