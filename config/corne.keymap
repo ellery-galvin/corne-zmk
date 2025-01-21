@@ -47,15 +47,29 @@
             bindings = <&sk LALT>;
         };
 
-        combo_cmd_shft {
+        combo_lcmd_rshft {
             timeout-ms = <40>;
             key-positions = <32 29>;
             bindings = <&sk LCMD  &sk RSHIFT>;
         };
 
-        combo_shft_cmd {
+        combo_lshft_rcmd {
             timeout-ms = <40>;
             key-positions = <20 33>;
+            bindings = <&sk LSHIFT  &sk RCMD >;
+        };
+
+
+        combo_lshft_lcmd {
+            timeout-ms = <40>;
+            key-positions = <20 32>;
+            bindings = <&sk LSHIFT  &sk LCMD >;
+        };
+
+
+        combo_rshft_rcmd {
+            timeout-ms = <40>;
+            key-positions = <29 33>;
             bindings = <&sk LSHIFT  &sk RCMD >;
         };
 
@@ -190,9 +204,9 @@
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "symbol";
                         bindings = <
-&kp LG(Q)      &kp BACKSPACE   &kp  UP         &kp LC(D)       &kp LG(W)        &mt KP_MINUS KP_PLUS           AS(LBKT)        AS(RBKT)      &kp UNDER         AS(BACKSLASH)    
+&kp LG(Q)      &kp BACKSPACE   &kp  UP         &kp LC(D)       &kp LG(W)        &mt KP_MINUS KP_PLUS           AS(LBKT)        AS(RBKT)       &mt AMPS UNDER          AS(BACKSLASH)    
 &kp LG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))    &mt KP_SLASH KP_MULTIPLY       &kp LPAR         &kp RPAR      &mt &R_assign KP_EQUAL         AS(SLASH)
-&kp LG(GRAVE)  &kp LG(TAB)     &sk LSHIFT   &kp LG(LS(TAB)) &kp LG(LS(GRAVE))   &mt CARET PERCENT              &kp LT           &kp GT        &mt AMPS DOLLAR            AS(GRAVE)  
+&kp LG(GRAVE)  &kp LG(TAB)     &sk LSHIFT   &kp LG(LS(TAB)) &kp LG(LS(GRAVE))   &mt CARET PERCENT              &kp LT           &kp GT        &mt DOLLAR HASH            AS(GRAVE)  
                             &trans   &trans    &trans        &sk RGUI  &sk RCTRL &sk RALT
                         >;
                 };
