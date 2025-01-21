@@ -150,16 +150,16 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  ' "   |  ,?  |  .- |  p  |  y  |     |  f  |  g   |  c   |  r   | l |
+// |  ' "   |  ,?  |  .! |  p  |  y  |     |  f  |  g   |  c   |  r   | l |
 // |  a     |  o   |  e  |  u  |  i  |     |  d  |  h   |  t   |  n   | s | 
 // |  ;  :  |  q   |  j  |  k  |  x  |     |  b  |  m   |  w   |  v   | z |
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "dvorak";
                         bindings = <
-   AS(SQT)          &mt  QMARK COMMA      &mt KP_MINUS KP_DOT  AS(P) AS(Y)         AS(F)   AS(G)  AS(C)     AS(R)     AS(L)
+   AS(SQT)          &mt  QMARK COMMA      &mt EXCL KP_DOT  AS(P) AS(Y)         AS(F)   AS(G)  AS(C)     AS(R)     AS(L)
    AS(A)            AS(O)                 AS(E)                AS(U) AS(I)         AS(D)   AS(H)  AS(T)     AS(N)     AS(S)
    &mt LSHIFT SEMI  AS(Q)                 AS(J)                AS(K) AS(X)         AS(B)   AS(M)  AS(W)     AS(V)     &mt RSHIFT Z
-                       &mt ESC LG(SPACE) &lt 4 LS(TAB)  &lt 3 SPACE         &lt 2 RET   &lt 5 TAB  &to 5
+                       &mt ESC LG(SPACE) &lt 4 LS(TAB)  &lt 3 SPACE         &lt 2 RET   &lt 5 TAB  &to 6
                         >;
                 };
 
@@ -189,10 +189,10 @@
                         display-name = "nav";
                         bindings = <
 
-   &kp LS(LEFT)  &kp LS(LEFT) &kp LS(RIGHT)  &kp LS(DOWN)  &kp LG(A)        &kp RG(Q)      &kp BACKSPACE   &kp  UP         &kp RC(D)       &kp RG(W)   
+   &kp LS(UP)    &kp LS(LEFT) &kp LS(RIGHT)  &kp LS(DOWN)  &kp LG(A)        &kp RG(Q)      &kp BACKSPACE   &kp  UP         &kp RC(D)       &kp RG(W)   
    &kp LG(LEFT)  &kp LA(LEFT) &kp RA(RIGHT)  &kp RG(RIGHT) &kp LG(F)        &kp RG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp RG(RS(Z))
    &kp LG(LS(C)) &kp LG(X)    &kp LG(C)    &kp LG(V)       &kp LS(LG(V))    &kp RG(GRAVE)  &kp RG(TAB)     &sk RSHIFT   &kp RG(RS(TAB)) &kp RG(RS(GRAVE))
-                            &sk LALT     &sk LCTRL     &sk LGUI             &trans   &trans    &trans
+&mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &mt LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))             &trans   &trans    &trans
                         >;
                 };
 
@@ -204,10 +204,10 @@
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "symbol";
                         bindings = <
-&kp LG(Q)      &kp BACKSPACE   &kp  UP         &kp LC(D)       &kp LG(W)        &mt KP_MINUS KP_PLUS           AS(LBKT)        AS(RBKT)       &mt AMPS UNDER          AS(BACKSLASH)    
-&kp LG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))    &mt KP_SLASH KP_MULTIPLY       &kp LPAR         &kp RPAR      &mt &R_assign KP_EQUAL         AS(SLASH)
-&kp LG(GRAVE)  &kp LG(TAB)     &sk LSHIFT   &kp LG(LS(TAB)) &kp LG(LS(GRAVE))   &mt CARET PERCENT              &kp LT           &kp GT        &mt DOLLAR HASH            AS(GRAVE)  
-                            &trans   &trans    &trans        &sk RGUI  &sk RCTRL &sk RALT
+&kp LG(Q)      &kp BACKSPACE   &kp  UP         &kp LC(D)       &kp LG(W)        &mt KP_SLASH KP_MULTIPLY     AS(LBKT)         AS(RBKT)      &mt AMPS UNDER            AS(BACKSLASH)    
+&kp LG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))    &mt KP_MINUS KP_PLUS         &kp LPAR         &kp RPAR      &mt &R_assign KP_EQUAL    AS(SLASH)
+&kp LG(GRAVE)  &kp LG(TAB)     &sk LSHIFT   &kp LG(LS(TAB)) &kp LG(LS(GRAVE))   &mt CARET PERCENT            &mt AT LT        &mt EXCL GT   &mt DOLLAR HASH           AS(GRAVE)  
+                                            &trans   &trans    &trans           &mt RG(RC(RA(LEFT)))  RC(RA(LEFT)) &mt RC(RA(RET))    &mt RG(RC(RA(RIGHT))) RC(RA(RIGHT))
                         >;
                 };
 
@@ -243,7 +243,7 @@
                         >;
                 };
 
-                mods {
+                click {
 // -----------------------------------------------------------------------------------------
 // | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
 // | BT1   | BT2 | BT3 | BT4 | BT5 |     | C_MUTE  | C_VOL_DN |  C_Vol_UP | C_BRI_DN | C_BRI_UP |  
