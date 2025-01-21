@@ -98,7 +98,7 @@
         combo_ctrl_shft {
             timeout-ms = <20>;
             key-positions = <32 30>;
-            bindings = <&sk LCTRl  &sk RSHIFT>;
+            bindings = <&sk LCTRL  &sk RSHIFT>;
         };
 
         combo_shft_ctrl {
@@ -116,7 +116,7 @@
         combo_shft_alt {
             timeout-ms = <20>;
             key-positions = <20 36>;
-            bindings = <&sk LSHIFt  &sk RALT>;
+            bindings = <&sk LSHIFT  &sk RALT>;
         };
     };
 
