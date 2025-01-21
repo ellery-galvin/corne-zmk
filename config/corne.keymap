@@ -82,10 +82,10 @@
                         display-name = "nav";
                         bindings = <
 
-   &none         &none        &none        &none          &none         &trans       &kp BACKSPACE   &kp  UP     &kp RC(D)      &trans    
-   &kp LG(LEFT)  &kp LA(LEFT) &kp RA(RIGHT)  &kp RG(RIGHT) &none         &kp RG(Z)    &kp LEFT        &kp DOWN    &kp RIGHT      &kp RG(RS(Z))
-   &kp LG(LS(C)) &kp LG(X)    &kp LG(C)    &kp LG(V)      &none         &kp SEMI     AS(DOT)     &kp LCTRL   &kp RALT  &trans
-                            &none     &none     &none           AS(RET)   &trans    &kp TAB
+   &kp LS(LEFT)  &kp LS(LEFT) &kp LS(RIGHT)  &kp LS(DOWN)  &kp LG(A)        &kp RG(Q)      &kp BACKSPACE   &kp  UP         &kp RC(D)       &kp RG(W)   
+   &kp LG(LEFT)  &kp LA(LEFT) &kp RA(RIGHT)  &kp RG(RIGHT) &kp LG(F)        &kp RG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp RG(RS(Z))
+   &kp LG(LS(C)) &kp LG(X)    &kp LG(C)    &kp LG(V)       &kp LS(LG(V))    &kp RG(GRAVE)  &kp RG(TAB)     &sk RSHIFT   &kp RG(RS(TAB)) &kp RG(RS(GRAVE))
+                            &sk LALT     &sk LCTRL     &sk LGUI             &trans   &trans    &trans
                         >;
                 };
 
@@ -97,11 +97,10 @@
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "symbol";
                         bindings = <
-
-   &none    &kp BACKSPACE   &kp  UP     &kp LC(D)   &none       &mt KP_MINUS KP_PLUS           AS(LBKT)         AS(RBKT)         &kp LG(D)                  AS(BACKSLASH)    
-   &none    &kp LEFT        &kp DOWN    &kp RIGHT   &none       &mt KP_SLASH KP_MULTIPLY       &kp KP_LPAR      &kp KP_RPAR      &mt &R_assign KP_EQUAL         AS(SLASH)  
-   &none    &none           &none       &none       &none       &mt CARET PERCENT              &mt GT LT        AS(MINUS)        &mt AMPS DOLLAR            AS(GRAVE)  
-                                &none     &none     &none       AS(RET)   &trans    &kp TAB
+&kp LG(Q)      &kp BACKSPACE   &kp  UP         &kp LC(D)       &kp LG(W)        &mt KP_MINUS KP_PLUS           AS(LBKT)        AS(RBKT)      &kp UNDER         AS(BACKSLASH)    
+&kp LG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))    &mt KP_SLASH KP_MULTIPLY       &kp LPAR         &kp RPAR      &mt &R_assign KP_EQUAL         AS(SLASH)
+&kp LG(GRAVE)  &kp LG(TAB)     &sk LSHIFT   &kp LG(LS(TAB)) &kp LG(LS(GRAVE))   &mt CARET PERCENT              &kp LT           &kp GT        &mt AMPS DOLLAR            AS(GRAVE)  
+                            &trans   &trans    &trans        &sk RGUI  &sk RCTRL &sk RALT
                         >;
                 };
 
@@ -113,10 +112,9 @@
 //            | GUI | ESC | SPC |           | ENT |     | TAB |
                         display-name = "number";
                         bindings = <
-
-   &none    &kp BACKSPACE   &kp  UP     &kp LC(D)     &none           &kp KP_MINUS       &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_SLASH    
-   &none    &kp LEFT        &kp DOWN    &kp RIGHT     &none           &kp KP_PLUS        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MULTIPLY  
-   &none    &none           &none       &none         &none           &kp KP_N0          &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_N0  
+&kp LG(Q)      &kp BACKSPACE   &kp  UP         &kp LC(D)       &kp LG(W)               &kp KP_MINUS       &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_SLASH    
+&kp LG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))           &kp KP_PLUS        &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp KP_MULTIPLY  
+&kp LG(GRAVE)  &kp LG(TAB)     &sk LSHIFT   &kp LG(LS(TAB)) &kp LG(LS(GRAVE))          &kp KP_N0          &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp KP_N0  
                                   &none     &none     &none          AS(RET)             &trans          &kp TAB
                         >;
                 };
