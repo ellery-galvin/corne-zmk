@@ -31,91 +31,91 @@
         compatible = "zmk,combos";
         combo_cmd {
             timeout-ms = <40>;
-            key-positions = <33 34>;
+            key-positions = <32 33>;
             bindings = <&sk LCMD>;
         };
 
         combo_ctrl {
             timeout-ms = <40>;
-            key-positions = <32 35>;
+            key-positions = <31 34>;
             bindings = <&sk LCTRL>;
         };
 
         combo_alt {
             timeout-ms = <40>;
-            key-positions = <31 36>;
+            key-positions = <30 35>;
             bindings = <&sk LALT>;
         };
 
         combo_cmd_shft {
             timeout-ms = <40>;
-            key-positions = <33 30>;
+            key-positions = <32 29>;
             bindings = <&sk LCMD  &sk RSHIFT>;
         };
 
         combo_shft_cmd {
             timeout-ms = <40>;
-            key-positions = <21 34>;
+            key-positions = <20 33>;
             bindings = <&sk LSHIFT  &sk RCMD >;
         };
 
         combo_cmd_ctrl {
             timeout-ms = <40>;
-            key-positions = <33 35>;
+            key-positions = <32 34>;
             bindings = <&sk LCMD  &sk RCTRL>;
         };
 
         combo_ctrl_cmd {
             timeout-ms = <40>;
-            key-positions = <32 34>;
+            key-positions = <31 33>;
             bindings = <&sk RCMD  &sk LCTRL>;
         };
 
         combo_cmd_alt {
             timeout-ms = <40>;
-            key-positions = <33 36>;
+            key-positions = <32 35>;
             bindings = <&sk LCMD  &sk RALT >;
         };
 
         combo_alt_cmd {
             timeout-ms = <40>;
-            key-positions = <31 34>;
+            key-positions = <30 33>;
             bindings = <&sk LALT  &sk RCMD >;
         };
 
         combo_ctrl_alt {
             timeout-ms = <40>;
-            key-positions = <32 36>;
+            key-positions = <31 35>;
             bindings = <&sk LCTRL  &sk RALT>;
         };
 
         combo_alt_ctrl {
             timeout-ms = <40>;
-            key-positions = <31 35>;
+            key-positions = <30 34>;
             bindings = <&sk LALT  &sk RCTRL>;
         };
 
         combo_ctrl_shft {
             timeout-ms = <40>;
-            key-positions = <32 30>;
+            key-positions = <31 29>;
             bindings = <&sk LCTRL  &sk RSHIFT>;
         };
 
         combo_shft_ctrl {
             timeout-ms = <40>;
-            key-positions = <20 35>;
+            key-positions = <20 34>;
             bindings = <&sk LSHIFT  &sk RCTRL>;
         };
 
         combo_alt_shft {
             timeout-ms = <40>;
-            key-positions = <31 30>;
+            key-positions = <30 29>;
             bindings = <&sk LALT  &sk RSHIFT>;
         };
 
         combo_shft_alt {
             timeout-ms = <40>;
-            key-positions = <20 36>;
+            key-positions = <20 35>;
             bindings = <&sk LSHIFT  &sk RALT>;
         };
     };
