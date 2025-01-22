@@ -252,7 +252,7 @@
                         display-name = "function";
                         bindings = <
    &trans      &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans
-   &sk LSHIFT  &LALT   &LCTRL    &LGUI    &to 0      &trans   &trans   &trans   &trans   &trans
+   &sk LSHIFT  &sk LALT   &sk LCTRL    &sk LGUI    &to 0      &trans   &trans   &trans   &trans   &trans
    &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans
                   &sk LALT &sk LCTRL &sk LGUI      &sk RGUI &sk RSHIFT  &to 0
                         >;
