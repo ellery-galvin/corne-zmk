@@ -156,10 +156,10 @@
 //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "dvorak";
                         bindings = <
-   &mt ESC SQT  &mt  QMARK COMMA      &mt EXCL KP_DOT  AS(P) AS(Y)         AS(F)   AS(G)  AS(C)     AS(R)     AS(L)
+   &mt ESC SQT      &mt  QMARK COMMA      &mt EXCL KP_DOT      AS(P) AS(Y)         AS(F)   AS(G)  AS(C)     AS(R)     AS(L)
    AS(A)            AS(O)                 AS(E)                AS(U) AS(I)         AS(D)   AS(H)  AS(T)     AS(N)     AS(S)
    &mt LSHIFT SEMI  AS(Q)                 AS(J)                AS(K) AS(X)         AS(B)   AS(M)  AS(W)     AS(V)     &mt RSHIFT Z
-                       &to 6 &lt 4 LS(TAB)  &lt 3 SPACE         &lt 2 RET   &lt 5 TAB  &lt 6 LG(SPACE)
+                                      &to 6 &lt 4 LS(TAB)  &lt 3 SPACE                &lt 2 RET   &lt 5 TAB  &lt 6 LG(SPACE)
                         >;
                 };
 
@@ -189,10 +189,10 @@
                         display-name = "nav";
                         bindings = <
 
-   &kp LS(UP)           &kp LS(LEFT) &kp LS(RIGHT)  &kp LS(DOWN)  &kp LG(A)        &none         &kp BACKSPACE   &kp  UP          &kp RC(D)        &none  
-   &kp LG(LEFT)         &kp LA(LEFT) &kp RA(RIGHT)  &kp RG(RIGHT) &kp LG(F)        &kp RG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp RG(RS(Z))
-   &kp LG(LS(C)) &kp LG(X)    &kp LG(C)    &kp LG(V)       &kp LS(LG(V))           &kp GRAVE      &kp TAB         &sk RSHIFT      &kp RSHIFT(TAB) &kp RSHIFT(GRAVE)
-&mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &mt LCMD LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))             &trans   &trans    &trans
+   &kp LS(UP)       &kp LS(LEFT) &kp LS(RIGHT)  &kp LS(DOWN)  &kp LG(A)                       &none          &kp BACKSPACE   &kp  UP         &kp RC(D)        &none  
+   &kp LG(LEFT)     &kp LA(LEFT) &kp RA(RIGHT)  &kp RG(RIGHT) &kp LG(F)                       &kp RG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp RG(RS(Z))
+   &kp LG(LS(C))    &kp LG(X)    &kp LG(C)      &kp LG(V)     &kp LS(LG(V))                   &kp GRAVE      &kp TAB         &sk RSHIFT      &kp RS(TAB) &kp RS(GRAVE)
+  &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &mt LCMD LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))             &trans   &trans    &trans
                         >;
                 };
 
@@ -204,10 +204,10 @@
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "symbol";
                         bindings = <
-&none             &kp BACKSPACE   &kp  UP         &kp LC(D)       &none                  &mt KP_SLASH KP_MULTIPLY     AS(LBKT)         AS(RBKT)      &mt AMPS UNDER            AS(BACKSLASH)    
-&kp LG(Z)             &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))       &mt KP_PLUS KP_MINUS         &kp LPAR         &kp RPAR      &mt &R_assign KP_EQUAL    AS(SLASH)
-&mt LSHIFT GRAVE      &kp TAB         &sk RSHIFT      &kp RSHIFT(TAB) &kp RSHIFT(GRAVE)   &mt CARET PERCENT            &mt AT LT        &mt EXCL GT   &mt DOLLAR HASH           AS(GRAVE)  
-                                            &trans   &trans    &trans           &mt RG(RC(RA(LEFT)))  RC(RA(LEFT)) &mt RCMD RC(RA(RET))    &mt RG(RC(RA(RIGHT))) RC(RA(RIGHT))
+&none                 &kp BACKSPACE   &kp  UP         &kp LC(D)       &none                  &mt KP_SLASH KP_MULTIPLY     AS(LBKT)         AS(RBKT)      &mt AMPS UNDER            AS(BACKSLASH)    
+&kp LG(Z)             &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))          &mt KP_PLUS KP_MINUS         &kp LPAR         &kp RPAR      &kp KP_EQUAL              AS(SLASH)
+&mt LSHIFT GRAVE      &kp TAB         &sk RSHIFT      &kp RS(TAB) &kp RS(GRAVE)      &mt CARET PERCENT            &mt AT LT        &mt EXCL GT   &mt DOLLAR HASH           AS(GRAVE)  
+                                            &trans   &trans    &trans                        &mt RG(RC(RA(LEFT)))  RC(RA(LEFT))     &mt RCMD RC(RA(RET))     &mt RG(RC(RA(RIGHT))) RC(RA(RIGHT))
                         >;
                 };
 
@@ -219,10 +219,10 @@
 //            | GUI | ESC | SPC |           | ENT |     | TAB |
                         display-name = "number";
                         bindings = <
-&none          &kp BACKSPACE   &kp  UP         &kp LC(D)       &none                   &kp MINUS          &kp N7       &kp N8       &kp N9       &kp SLASH    
-&kp LG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))           &kp PLUS        &kp N4       &kp N5       &kp N6       &kp KP_MULTIPLY  
-&mt LSHIFT GRAVE      &kp TAB         &sk RSHIFT      &kp RSHIFT(TAB) &kp RSHIFT(GRAVE)&kp N0          &kp N1       &kp N2       &kp N3       &kp RSHIFT  
-                                  &none     &none     &none                            AS(RET)             &mt RSHIFT TAB          &kp TAB
+&none             &kp BACKSPACE   &kp  UP         &kp LC(D)       &none                   &kp MINUS       &kp N7       &kp N8       &kp N9       &kp SLASH    
+&kp LG(Z)         &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))           &kp PLUS        &kp N4       &kp N5       &kp N6       &kp KP_MULTIPLY  
+&mt LSHIFT GRAVE  &kp TAB         &sk RSHIFT      &kp RS(TAB)     &kp RS(GRAVE)       &kp N0          &kp N1       &kp N2       &kp N3       &kp RSHIFT  
+                                  &none           &none           &none                   AS(RET)         &mt RSHIFT TAB          &kp TAB
                         >;
                 };
 
@@ -251,10 +251,10 @@
 //               | GUI |     | SPC |     | ENT | ESC | TAB |
                         display-name = "function";
                         bindings = <
-   &trans      &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans
-   &sk LSHIFT  &sk LALT   &sk LCTRL    &sk LGUI    &to 0      &trans   &trans   &trans   &trans   &trans
-   &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans
-                  &sk LALT &sk LCTRL &sk LGUI      &sk RGUI &sk RSHIFT  &to 0
+   &trans      &trans     &trans       &trans      &trans      &trans   &trans   &trans   &trans   &trans
+   &sk LSHIFT  &sk LALT   &sk LCTRL    &sk LGUI    &to 0       &trans   &trans   &trans   &trans   &trans
+   &trans      &trans     &trans       &trans      &trans      &trans   &trans   &trans   &trans   &trans
+               &sk LALT   &sk LCTRL    &sk LGUI    &sk RGUI    &sk RSHIFT  &to 0
                         >;
                 };
 
