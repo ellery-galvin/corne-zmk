@@ -213,7 +213,7 @@
    &kp LS(UP)           &kp LS(LEFT) &kp LS(RIGHT)   &kp LS(DOWN)  &kp LG(A)                       &mt LG(LBKT) TAB &kp BACKSPACE   &kp  UP             &kp RC(D)     &mt RG(RBKT) RS(TAB)
    &kp LG(LEFT)         &kp LA(LEFT) &kp RA(RIGHT)   &kp RG(RIGHT) &kp LG(F)                       &kp RG(Z)        &kp LEFT        &kp DOWN            &kp RIGHT     &kp RG(RS(Z))
    &mt LSHIFT LG(LS(C)) &kp LG(X)    &kp LG(C)       &kp LG(V)     &kp LS(LG(V))                   &tab_search      &kp RG(L)       &mt LS(LG(R)) LG(R) &kp RG(T)     &kp SLASH
-                                       &kp ESC     &mt LG(L) LG(T) &mt CTRL SPACE                  &trans   &trans    &trans
+                                       &kp ESC     &mt LG(L) LG(T) &mt LCTRL SPACE                  &trans   &trans    &trans
                         >;
                 };
 
