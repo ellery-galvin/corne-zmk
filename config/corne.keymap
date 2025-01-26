@@ -33,7 +33,7 @@
             bindings = <&kp DOT >, <&kp EXCL >;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        pedq: comma_qmark {
+        comma_qmark: comma_qmark {
             compatible = "zmk,behavior-mod-morph";
             label = "comma question";
             #binding-cells = <0>;
