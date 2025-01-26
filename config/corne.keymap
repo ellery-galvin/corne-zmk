@@ -275,7 +275,7 @@
    &trans      &trans     &trans       &trans      &trans      &trans   &trans    &trans    &trans      &trans
    &sk LSHIFT  &sk LALT   &sk LCTRL    &sk LGUI    &trans      &none    &kp GRAVE &kp TAB   &kp RS(TAB) &kp RS(GRAVE)
    &trans      &trans     &trans       &trans      &trans      &trans   &trans   &trans    &trans   &trans
-               &sk LALT   &sk LCTRL    &sk LGUI    &sk trans   &trans   &trans
+               &sk LALT   &sk LCTRL    &sk LGUI    &trans   &trans   &trans
                         >;
                 };
 
