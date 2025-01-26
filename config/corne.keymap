@@ -26,7 +26,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        dot_exc: dot_excl {
+        dot_excl: dot_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "dot exc";
             #binding-cells = <0>;
