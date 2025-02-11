@@ -46,53 +46,49 @@
             #binding-cells = <0>;
             bindings = <&kp KP_MULT>, <&kp KP_SLASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-};
+        };
         minus_plus: minus_plus {
             compatible = "zmk,behavior-mod-morph";
             label = "minus plus";
             #binding-cells = <0>;
             bindings = <&kp KP_MINUS>, <&kp KP_PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-      percent_caret: percent_caret {
+        };
+        percent_caret: percent_caret {
             compatible = "zmk,behavior-mod-morph";
             label = "caret percent";
             #binding-cells = <0>;
             bindings = <&kp CARET>, <&kp PERCENT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-      lt_at: lt_at {
+        };
+        lt_at: lt_at {
             compatible = "zmk,behavior-mod-morph";
             label = "lt at";
             #binding-cells = <0>;
             bindings = <&kp LT>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-
-      gt_excl: gt_excl {
+        };
+        gt_excl: gt_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "gt excl";
             #binding-cells = <0>;
             bindings = <&kp GT>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-
-      hash_dollar: hash_dollar {
+        };
+        hash_dollar: hash_dollar {
             compatible = "zmk,behavior-mod-morph";
             label = "lt at";
             #binding-cells = <0>;
             bindings = <&kp HASH>, <&kp DOLLAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-
-      under_amps : under_amps {
+        };
+        under_amps : under_amps {
             compatible = "zmk,behavior-mod-morph";
             label = "lt at";
             #binding-cells = <0>;
             bindings = <&kp UNDER>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-};
-
+        };
         td_esc_cmd_ctrl_alt: td_esc_cmd_ctrl_alt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -268,7 +264,7 @@
    &mt LSHIFT LG(LS(C)) &kp LG(X)    &kp LG(C)       &kp LG(V)     &kp LS(LG(V))                   &tab_search      &kp PG_DN        &mt LS(LG(R)) LG(R) &kp PG_UP       &kp RG(SLASH)
                   &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T) &mt LC(DOT) SPACE                  &trans   &trans    &trans
                         >;
-                };/
+                };
 
                 sym {
 // -----------------------------------------------------------------------------------------
@@ -293,16 +289,16 @@
 //            | GUI | ESC | SPC |           | ENT |     | TAB |
                         display-name = "number";
                         bindings = <
-&none             &kp BACKSPACE   &kp  UP         &kp LC(D)       &none                   &mt MINUS PLUS  &kp N7       &kp N8       &kp N9       &kp SLASH    
-&kp LG(Z)         &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))           &kp COMMA       &kp N4       &kp N5       &kp N6       &kp KP_MULTIPLY  
-&mt LSHIFT GRAVE  &kp TAB         &sk RSHIFT      &kp RS(TAB)     &kp RS(GRAVE)           &kp N0          &kp N1       &kp N2       &kp N3       &kp COLON  
+&none             &kp BACKSPACE   &kp  UP         &kp LC(D)       &none                   &mt MINUS PLUS  &kp N7       &kp N8       &kp N9       &mt SLASH KP_MULTIPLY
+&kp LG(Z)         &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))           &kp COMMA       &kp N4       &kp N5       &kp N6       &kp COLON
+&mt LSHIFT GRAVE  &kp TAB         &sk RSHIFT      &kp RS(TAB)     &kp RS(GRAVE)           &kp N0          &kp N1       &kp N2       &kp N3       &none  
                                   &none           &none           &none                   AS(RET)         &mt RSHIFT TAB          &kp TAB
                         >;
                 };
 
 
 
-                sytem {
+                system {
 // -----------------------------------------------------------------------------------------
 // | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
 // | BT1   | BT2 | BT3 | BT4 | BT5 |     | C_MUTE  | C_VOL_DN |  C_Vol_UP | C_BRI_DN | C_BRI_UP |  
