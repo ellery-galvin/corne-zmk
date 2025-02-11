@@ -257,7 +257,7 @@
 //            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "symbol";
                         bindings = <
- &none           &kp BACKSPACE    &kp  UP          &mt LC(K) LC(D)  &kp LG(SLASH)                  &none      &kp LBKT          &kp RBKT       &kp under_amps             &kp BACKSLASH
+ &none           &kp BACKSPACE    &kp  UP          &mt LC(K) LC(D)  &kp LG(SLASH)                  &none      &kp LBKT          &kp RBKT       &none             &kp BACKSLASH
 &kp LG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))       &kp minus_plus     &kp LPAR         &kp RPAR      &kp KP_EQUAL              &kp SLASH
 &kp LSHIFT     &kp F10         &kp F11         &kp LS(F11)     &kp F5              &kp percent_caret  &kp lt_at        &kp gt_excl   &kp hash_dollar           &kp GRAVE
                                             &trans   &trans    &trans              &kp RCMD     &kp RCTRL     &kp RALT
