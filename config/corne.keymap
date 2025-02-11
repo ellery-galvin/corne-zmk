@@ -40,6 +40,7 @@
             bindings = <&kp COMMA>, <&kp QMARK>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         mult_slash: mult_slash {
             compatible = "zmk,behavior-mod-morph";
             label = "mult slash";
@@ -216,6 +217,10 @@
     };
 
         keymap {
+
+
+
+
                 compatible = "zmk,keymap";
 
                 default_layer {
@@ -259,7 +264,7 @@
                         display-name = "nav";
                         bindings = <
 
-   &kp LS(UP)           &kp LS(LEFT) &kp LS(RIGHT)   &kp LS(DOWN)  &kp LG(A)                       &mt LG(LBKT) TAB &kp BACKSPACE    &kp  UP             &mt RC(K) RC(D) &mt RG(RBKT) RS(TAB)
+   &kp LS(UP)           &kp LS(LEFT) &kp LS(RIGHT)   &kp LS(DOWN)  &kp LG(A)                       &kp LG(LBKT)     &kp BACKSPACE    &kp  UP             &mt RC(K) RC(D) &kp RG(RBKT)
    &kp LG(LEFT)         &kp LA(LEFT) &kp RA(RIGHT)   &kp RG(RIGHT) &kp LG(F)                       &kp RG(Z)        &kp LEFT         &kp DOWN            &kp RIGHT       &kp RG(RS(Z))
    &mt LSHIFT LG(LS(C)) &kp LG(X)    &kp LG(C)       &kp LG(V)     &kp LS(LG(V))                   &tab_search      &kp PG_DN        &mt LS(LG(R)) LG(R) &kp PG_UP       &kp RG(SLASH)
                   &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T) &mt LC(DOT) SPACE                  &trans   &trans    &trans
@@ -289,7 +294,7 @@
 //            | GUI | ESC | SPC |           | ENT |     | TAB |
                         display-name = "number";
                         bindings = <
-&none             &kp BACKSPACE   &kp  UP         &kp LC(D)       &none                   &mt MINUS PLUS  &kp N7       &kp N8       &kp N9       &mt SLASH KP_MULTIPLY
+&none             &kp BACKSPACE   &kp  UP         &mt RC(K) LC(D) &none                   &mt MINUS PLUS  &kp N7       &kp N8       &kp N9       &mt SLASH KP_MULTIPLY
 &kp LG(Z)         &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))           &kp COMMA       &kp N4       &kp N5       &kp N6       &kp COLON
 &mt LSHIFT GRAVE  &kp TAB         &sk RSHIFT      &kp RS(TAB)     &kp RS(GRAVE)           &kp N0          &kp N1       &kp N2       &kp N3       &none  
                                   &none           &none           &none                   AS(RET)         &mt RSHIFT TAB          &kp TAB
