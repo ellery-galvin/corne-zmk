@@ -289,7 +289,7 @@
 //               | GUI |     | SPC |     | ENT | ESC | TAB |
                         display-name = "function";
                         bindings = <
-   &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2 &bt BT_SEL 3    &mt BT_CLR BT_SEL 4        &kp RC(RA(UP))             &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
+   &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp RC(RA(UP))             &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
    &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP                &mt LG(BACKSLASH) LG(DOT)  &sk  RGUI    &sk RCTRL      &sk RALT     &sk RSHIFT
    &mt LSHIFT GRAVE  &bt BT_CLR    &kp C_PREV    &kp C_NEXT      &kp C_PP                  &none                      &none        &none          &none        &sk RSHIFT 
                                 &mt LG(Q) LG(W)   &kp LG(M)  &kp TAB                &trans  &trans  &trans
