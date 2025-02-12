@@ -96,12 +96,6 @@
             tapping-term-ms = <200>;
             bindings = <&mt LCMD ESC>, <&kp LCTRL>, <&kp LALT>;
         };
-        td_exp_press: td_exp_press {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <1>;
-            tapping-term-ms = <200>;
-            bindings = <&mt LCMD ESC>, <&kp LCTRL>, <&kp LALT>;
-        };
     };
 
     combos {
