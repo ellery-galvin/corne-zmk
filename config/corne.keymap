@@ -106,70 +106,70 @@
         };
         powers_right: powers_right {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "right speed";
             #binding-cells = <0>;
             bindings = <&kp RIGHT>, <&td_powers_right>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_left: powers_left {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "left speed";
             #binding-cells = <0>;
             bindings = <&kp LEFT>, <&td_powers_left>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_wright: powers_wright {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "word right speed";
             #binding-cells = <0>;
             bindings = <&kp LA(RIGHT)>, <&td_powers_wright>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_wleft: powers_wleft {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "word left speed";
             #binding-cells = <0>;
             bindings = <&kp LA(LEFT)>, <&td_powers_wleft>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_sright: powers_sright {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "select right speed";
             #binding-cells = <0>;
             bindings = <&kp LS(RIGHT)>, <&td_powers_sright>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_sleft: powers_sleft {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "select left speed";
             #binding-cells = <0>;
             bindings = <&kp LA(LEFT)>, <&td_powers_wleft>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_sup: powers_sup {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "select up speed";
             #binding-cells = <0>;
             bindings = <&kp LS(UP)>, <&td_powers_sup>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_sdown: powers_sdown {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "select down speed";
             #binding-cells = <0>;
             bindings = <&kp LS(DOWN)>, <&td_powers_sdown>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_dright: powers_dright {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "delete right speed";
             #binding-cells = <0>;
             bindings = <&mt LC(K) LG(D)>, <&td_powers_dright>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         powers_dleft: powers_dleft {
             compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
+            label = "delete left speed";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&td_powers_dleft>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
