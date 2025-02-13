@@ -90,6 +90,13 @@
             bindings = <&kp UNDER>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        powers_up: powers_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&td_powers_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         td_esc_cmd_ctrl_alt: td_esc_cmd_ctrl_alt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -100,7 +107,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp UP>, <&tap_two UP>, <&tap_four UP>, <&tap_eight UP>, <&tap_sixteen UP>;
+            bindings = <&tap_eight UP>, <&tap_thirtytwo UP>, <&tap_sixtyfour UP>;
         };   
     };
 
@@ -239,6 +246,26 @@
                   <&macro_param_1to1>, <&tap_eight MACRO_PLACEHOLDER>
             ;
         };
+        tap_thirtytwo: tap_thirtytwo {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            wait-ms = <1>;
+            bindings
+                = <&macro_param_1to1>, <&tap_sixteen MACRO_PLACEHOLDER>,
+                  <&macro_param_1to1>, <&tap_sixteen MACRO_PLACEHOLDER>
+            ;
+        };
+        tap_sixtyfour: tap_sixtyfour {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            wait-ms = <1>;
+            bindings
+                = <&macro_param_1to1>, <&tap_thirtytwo MACRO_PLACEHOLDER>,
+                  <&macro_param_1to1>, <&tap_thirtytwo MACRO_PLACEHOLDER>
+            ;
+        };
+
+
     };
 
         keymap {
@@ -285,7 +312,7 @@
                         display-name = "nav";
                         bindings = <
 
-   &kp LS(UP)           &kp LS(LEFT) &kp LS(RIGHT)   &kp LS(DOWN)  &kp LG(A)                       &kp LG(LBKT)     &kp BACKSPACE    &td_powers_up       &mt RC(K) RC(D) &kp RG(RBKT)
+   &kp LS(UP)           &kp LS(LEFT) &kp LS(RIGHT)   &kp LS(DOWN)  &kp LG(A)                       &kp LG(LBKT)     &kp BACKSPACE    &powers_up       &mt RC(K) RC(D) &kp RG(RBKT)
    &kp LG(LEFT)         &kp LA(LEFT) &kp RA(RIGHT)   &kp RG(RIGHT) &kp LG(F)                       &kp RG(Z)        &kp LEFT         &kp DOWN            &kp RIGHT       &kp RG(RS(Z))
    &mt LSHIFT LG(LS(C)) &kp LG(X)    &kp LG(C)       &kp LG(V)     &kp LS(LG(V))                   &tab_search      &kp PG_DN        &mt LS(LG(R)) LG(R) &kp PG_UP       &kp RG(SLASH)
                   &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T) &mt LC(DOT) SPACE                  &trans   &trans    &trans
