@@ -232,7 +232,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&tap_eight LS(UP)>, <&tap_sixteen LS(up)>;
+            bindings = <&tap_eight LS(UP)>, <&tap_sixteen LS(UP)>;
         };
         td_powers_sdown: td_powers_sdown {
             compatible = "zmk,behavior-tap-dance";
