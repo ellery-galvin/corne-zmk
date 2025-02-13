@@ -457,7 +457,7 @@
 
    &powers_sup          &powers_sleft &powers_sright   &powers_sdown  &kp LG(A)               &kp LG(LBKT)     &powers_dleft    &powers_up           &powers_dright  &kp RG(RBKT)
    &kp LG(LEFT)         &powers_wleft &powers_wright   &kp RG(RIGHT)  &kp LG(F)               &kp RG(Z)        &powers_left     &powers_down         &powers_right   &kp RG(RS(Z))
-   &mt LSHIFT LG(LS(C)) &kp LG(X)     &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN       &kp RG(SLASH)
+   &mt LSHIFT LG(LS(C)) &kp LG(X)     &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN       &mt RSHIFT RG(SLASH)
                   &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T) &mt LC(DOT) SPACE           &trans   &trans    &trans
                         >;
                 };
