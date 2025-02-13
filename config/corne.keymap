@@ -97,6 +97,83 @@
             bindings = <&kp UP>, <&td_powers_up>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        powers_down: powers_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "down speed";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>, <&td_powers_down>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_right: powers_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT>, <&td_powers_right>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_left: powers_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT>, <&td_powers_left>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_wright: powers_wright {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT)>, <&td_powers_wright>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_wleft: powers_wleft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT)>, <&td_powers_wleft>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_sright: powers_sright {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp LS(RIGHT)>, <&td_powers_sright>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_sleft: powers_sleft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT)>, <&td_powers_wleft>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_sup: powers_sup {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp LS(UP)>, <&td_powers_sup>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_sdown: powers_sdown {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp LS(DOWN)>, <&td_powers_sdown>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_dright: powers_dright {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&mt LC(K) LG(D)>, <&td_powers_dright>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        powers_dleft: powers_dleft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "up speed";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&td_powers_dleft>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         td_esc_cmd_ctrl_alt: td_esc_cmd_ctrl_alt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -107,8 +184,74 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&tap_eight UP>, <&tap_thirtytwo UP>, <&tap_sixtyfour UP>;
-        };   
+            bindings = <&tap_eight UP>, <&tap_sixteen UP>;
+        };
+        td_powers_down: td_powers_down {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight DOWN>, <&tap_sixteen DOWN>;
+        };
+        td_powers_right: td_powers_right {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight RIGHT>, <&tap_sixteen RIGHT>;
+        };
+        td_powers_left: td_powers_left {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight LEFT>, <&tap_sixteen LEFT>;
+        };
+        td_powers_wright: td_powers_wright {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_two LA(RIGHT)>, <&tap_four LA(RIGHT)>;
+        };
+        td_powers_wleft: td_powers_wleft {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_two LA(LEFT)>, <&tap_four LA(LEFT)>;
+        };
+        td_powers_sright: td_powers_sright {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight LS(RIGHT)>, <&tap_sixteen LS(RIGHT)>;
+        };
+        td_powers_sleft: td_powers_sleft {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight LS(LEFT)>, <&tap_sixteen LS(LEFT)>;
+        };
+        td_powers_sup: td_powers_sup {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight LS(UP)>, <&tap_sixteen LS(up)>;
+        };
+        td_powers_sdown: td_powers_sdown {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight LS(DOWN)>, <&tap_sixteen LS(DOWN)>;
+        };
+        td_powers_dright: td_powers_dright {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight LC(D)>, <&tap_sixteen LC(D)>;
+        };
+        td_powers_dleft: td_powers_dleft {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tap_eight BACKSPACE>, <&tap_sixteen BACKSPACE>;
+        };
     };
 
     combos {
@@ -312,10 +455,10 @@
                         display-name = "nav";
                         bindings = <
 
-   &kp LS(UP)           &kp LS(LEFT) &kp LS(RIGHT)   &kp LS(DOWN)  &kp LG(A)                       &kp LG(LBKT)     &kp BACKSPACE    &powers_up       &mt RC(K) RC(D) &kp RG(RBKT)
-   &kp LG(LEFT)         &kp LA(LEFT) &kp RA(RIGHT)   &kp RG(RIGHT) &kp LG(F)                       &kp RG(Z)        &kp LEFT         &kp DOWN            &kp RIGHT       &kp RG(RS(Z))
-   &mt LSHIFT LG(LS(C)) &kp LG(X)    &kp LG(C)       &kp LG(V)     &kp LS(LG(V))                   &tab_search      &kp PG_DN        &mt LS(LG(R)) LG(R) &kp PG_UP       &kp RG(SLASH)
-                  &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T) &mt LC(DOT) SPACE                  &trans   &trans    &trans
+   &powers_sup          &powers_sleft &powers_sright   &powers_sdown  &kp LG(A)               &kp LG(LBKT)     &powers_dleft    &powers_up           &powers_dright  &kp RG(RBKT)
+   &kp LG(LEFT)         &powers_wleft &powers_wright   &kp RG(RIGHT)  &kp LG(F)               &kp RG(Z)        &powers_left     &powers_down         &powers_right   &kp RG(RS(Z))
+   &mt LSHIFT LG(LS(C)) &kp LG(X)     &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN       &kp RG(SLASH)
+                  &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T) &mt LC(DOT) SPACE           &trans   &trans    &trans
                         >;
                 };
 
