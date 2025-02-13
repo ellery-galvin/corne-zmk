@@ -357,7 +357,8 @@
             #binding-cells = <1>;
             wait-ms = <10>;
             bindings
-                = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,
+                = <&macro_release &kp LSHIFT &kp RSHIFT>,
+                  <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,
                   <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
             ;
         };
