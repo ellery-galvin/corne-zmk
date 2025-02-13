@@ -355,7 +355,7 @@
         tap_two: tap_two {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            wait-ms = <1>;
+            wait-ms = <10>;
             bindings
                 = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,
                   <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
@@ -364,7 +364,7 @@
         tap_four: tap_four {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            wait-ms = <1>;
+            wait-ms = <10>;
             bindings
                 = <&macro_param_1to1>, <&tap_two MACRO_PLACEHOLDER>,
                   <&macro_param_1to1>, <&tap_two MACRO_PLACEHOLDER>
@@ -373,7 +373,7 @@
         tap_eight: tap_eight {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            wait-ms = <1>;
+            wait-ms = <10>;
             bindings
                 = <&macro_param_1to1>, <&tap_four MACRO_PLACEHOLDER>,
                   <&macro_param_1to1>, <&tap_four MACRO_PLACEHOLDER>
@@ -383,7 +383,7 @@
         tap_sixteen: tap_sixteen {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            wait-ms = <1>;
+            wait-ms = <10>;
             bindings
                 = <&macro_param_1to1>, <&tap_eight MACRO_PLACEHOLDER>,
                   <&macro_param_1to1>, <&tap_eight MACRO_PLACEHOLDER>
@@ -392,7 +392,7 @@
         tap_thirtytwo: tap_thirtytwo {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            wait-ms = <1>;
+            wait-ms = <10>;
             bindings
                 = <&macro_param_1to1>, <&tap_sixteen MACRO_PLACEHOLDER>,
                   <&macro_param_1to1>, <&tap_sixteen MACRO_PLACEHOLDER>
@@ -401,7 +401,7 @@
         tap_sixtyfour: tap_sixtyfour {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            wait-ms = <1>;
+            wait-ms = <10>;
             bindings
                 = <&macro_param_1to1>, <&tap_thirtytwo MACRO_PLACEHOLDER>,
                   <&macro_param_1to1>, <&tap_thirtytwo MACRO_PLACEHOLDER>
