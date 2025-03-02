@@ -17,6 +17,14 @@
     };
 
     behaviors {
+        space_groups: behavior_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            hold-trigger-on-release;
+            bindings = <&kp SPACE>, <&kp LG(DOT)>;
+        };
+
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -458,7 +466,7 @@
    &kp LS(UP)           &kp LS(LEFT)     &kp LS(RIGHT)    &kp LS(DOWN)   &kp LG(A)               &kp LG(LBKT)     &kp BACKSPACE    &kp UP               &kp RC(D)      &kp RG(RBKT)
    &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  &kp LG(F)               &kp RG(Z)        &kp LEFT         &kp DOWN             &kp RIGHT      &kp RG(RS(Z))
    &lt 6 LG(LS(C))      &kp LG(X)        &kp LG(C)      &kp LG(V)      &kp LS(LG(V))              &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &lt 6 RG(SLASH)
-                  &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T) &mt LC(DOT) SPACE           &trans   &trans    &trans
+                  &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T)       &space_groups           &trans   &trans    &trans
                         >;
                 };
 
