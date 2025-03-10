@@ -17,14 +17,14 @@
     };
 
     behaviors {
-        space_groups: behavior_hold_tap {
+        space_groups: space_groups {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&groups >, <&kp SPACE >;
         };
-        esc_cmd_alt: behavior_hold_tap {
+        esc_cmd_alt: esc_cmd_alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "tap-preferred";
