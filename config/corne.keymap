@@ -19,11 +19,10 @@
     behaviors {
         space_groups: behavior_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            hold-trigger-on-release;
-            bindings = <&kp >, <&kp >;
+            bindings = <&groups >, <&kp SPACE >;
         };
 
         as: auto_shift {
@@ -64,6 +63,15 @@
             bindings = <&kp KP_MINUS>, <&kp KP_PLUS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        zoom: zoom {
+            compatible = "zmk,behavior-mod-morph";
+            label = "minus plus";
+            #binding-cells = <0>;
+            bindings = <&kp RG(KP_PLUS)>, <&kp RG(KP_MINUS)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         percent_caret: percent_caret {
             compatible = "zmk,behavior-mod-morph";
             label = "caret percent";
@@ -187,7 +195,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LCMD ESC>, <&kp LCTRL>, <&kp LALT>;
+            bindings = <&mt LCMD ESC>, <&sk LCTRL>, <&skCC LALT>;
         };
         td_powers_up: td_powers_up {
             compatible = "zmk,behavior-tap-dance";
@@ -354,11 +362,26 @@
     };
 
     macros {
+        groups: groups {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LCTRL(DOT) >
+                ;
+        };
+
         tab_search: tab_search {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp LG(L) &kp PERCENT &kp SPACE>
+                ;
+        };
+        bookmark_search: bookmark_search {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LG(L) &kp STAR &kp SPACE>
                 ;
         };
         tap_two: tap_two {
@@ -434,7 +457,7 @@
    &kp SQT          &comma_qmark   &dot_excl    &kp P    &kp Y         &kp F    &kp G    &kp C    &kp R   &kp L
    &kp A            &kp O          &kp E        &kp U    &kp I         &kp D    &kp H    &kp T    &kp N   &kp S
    &mt LSHIFT SEMI  &kp Q          &kp J        &kp  K    &kp X        &kp B    &kp M    &kp W    &kp V   &mt RSHIFT Z
-              &td_esc_cmd_ctrl_alt   &lt 4 LS(TAB)  &lt 3 SPACE        &lt 2 RET   &lt 5 TAB  &lt 1 LG(SPACE)
+              &mt LALT ESC   &lt 4 LS(TAB)  &lt 3 SPACE        &lt 2 RET   &lt 5 TAB  &mt LCTRL LG(SPACE)
                         >;
                 };
 
@@ -467,7 +490,7 @@
    &kp LS(UP)           &kp LS(LEFT)     &kp LS(RIGHT)    &kp LS(DOWN)   &kp LG(A)               &kp LG(LBKT)     &kp BACKSPACE    &kp UP               &kp RC(D)      &kp RG(RBKT)
    &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  &kp LG(F)               &kp RG(Z)        &kp LEFT         &kp DOWN             &kp RIGHT      &kp RG(RS(Z))
    &lt 6 LG(LS(C))      &kp LG(X)        &kp LG(C)      &kp LG(V)      &kp LS(LG(V))              &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &lt 6 RG(SLASH)
-                  &mt RG(KP_MINUS) RG(KP_PLUS)    &mt LG(L) LG(T)  &space_groups SPACE LG(DOT)          &trans   &trans    &trans
+                  &bookmark_search    &mt LG(L) LG(T)      &space_groups          &trans   &trans    &trans
                         >;
                 };
 
@@ -513,7 +536,7 @@
                         bindings = <
    &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp RC(RA(UP))             &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
    &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP                &mt LG(BACKSLASH) LG(DOT)  &sk  RGUI    &sk RCTRL      &sk RALT     &sk RSHIFT
-   &mt LSHIFT GRAVE  &bt BT_CLR    &kp C_PREV    &kp C_NEXT      &kp C_PP                  &none                      &none        &none          &none        &sk RSHIFT 
+   &mt LSHIFT GRAVE  &zoom         &kp C_PREV    &kp C_NEXT      &kp C_PP                  &none                      &none        &none          &none        &sk RSHIFT 
                                 &mt LG(Q) LG(W)   &kp LG(M)  &kp TAB                &trans  &trans  &trans
                         >;
                 };
