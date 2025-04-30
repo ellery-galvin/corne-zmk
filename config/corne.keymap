@@ -239,7 +239,9 @@
     };
 
         keymap {
-                compatible = "zmk,keymap";
+            compatible = "zmk,keymap";
+
+            dvorak: dvorak {
                 display-name = "dvorak";
                 bindings = <
    &kp SQT          &comma_qmark   &dot_excl    &kp P    &kp Y         &kp F    &kp G    &kp C    &kp R   &kp L
@@ -249,7 +251,7 @@
                         >;
                 };
 
-                qwerty {
+            qwerty: qwerty {
                         display-name = "qwerty";
                         bindings = <
    AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
@@ -260,7 +262,7 @@
                 };
 
 
-                nav {
+            nav: nav {
                         display-name = "nav";
                         bindings = <
 
@@ -271,7 +273,7 @@
                         >;
                 };
 
-                sym {
+            sym: sym {
                         display-name = "symbol";
                         bindings = <
 &none          &kp BACKSPACE   &kp  UP         &mt LC(K) LC(D) &kp LG(SLASH)       &mult_slash      &kp LBKT    &kp RBKT    &under_amps    &kp BACKSLASH
@@ -281,7 +283,7 @@
                         >;
                 };
 
-                num {
+            num: num {
                         display-name = "number";
                         bindings = <
 &none             &kp BACKSPACE   &kp  UP         &mt RC(K) LC(D) &none                   &mt MINUS PLUS  &kp N7       &kp N8       &kp N9       &mt SLASH KP_MULTIPLY
@@ -292,7 +294,7 @@
                 };
 
 
-                system {
+            system: system {
                         display-name = "function";
                         bindings = <
    &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp RC(RA(UP))             &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
@@ -302,7 +304,7 @@
                         >;
                 };
 
-                mouse {
+            mouse: mouse {
                         display-name = "mouse";
                         bindings = <
    &none      &none     &none      &none     &none          &none   &none   &none   &none   &none    
@@ -313,4 +315,4 @@
                 };
 
         };
-/ };
+};
