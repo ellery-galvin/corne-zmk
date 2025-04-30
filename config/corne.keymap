@@ -16,21 +16,6 @@
     };
 
     behaviors {
-        space_groups: space_groups {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&groups &kp SPACE >;
-        };
-        esc_cmd_alt: esc_cmd_alt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&cmd_alt &kp ESC >;
-        };
-
         as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -318,12 +303,12 @@
                 };
 
                 mouse {
-                        display-name = "function";
+                        display-name = "mouse";
                         bindings = <
-   &none      &none     &none      &none  &none          &none   &none   &none   &none   &none    
-   &sk LSHIFT &sk LALT  &sk LCTRL  &LGUI  &none          &none   &none   &none   &none   &none
-   &kp LSHIFT &none     &none      &none  &none          &none   &none   &none   &none   &none 
-                        &none      &none  &none          &trans  &trans  &trans
+   &none      &none     &none      &none     &none          &none   &none   &none   &none   &none    
+   &sk LSHIFT &sk LALT  &sk LCTRL  &sk LGUI  &none          &none   &none   &none   &none   &none
+   &kp LSHIFT &none     &none      &none     &none          &none   &none   &none   &none   &none 
+                        &none      &none     &none          &trans  &trans  &trans
                         >;
                 };
 
