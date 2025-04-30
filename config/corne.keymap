@@ -89,7 +89,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "caret percent";
             #binding-cells = <0>;
-            bindings = <&kp CARET>, <&kp PERCENT>;
+            bindings = <&kp PERCENT>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         lt_at: lt_at {
@@ -119,162 +119,6 @@
             #binding-cells = <0>;
             bindings = <&kp UNDER>, <&kp AMPS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_up: powers_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "up speed";
-            #binding-cells = <0>;
-            bindings = <&kp UP>, <&td_powers_up>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_down: powers_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "down speed";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&td_powers_down>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_right: powers_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "right speed";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&td_powers_right>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_left: powers_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "left speed";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&td_powers_left>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_wright: powers_wright {
-            compatible = "zmk,behavior-mod-morph";
-            label = "word right speed";
-            #binding-cells = <0>;
-            bindings = <&kp LA(RIGHT)>, <&td_powers_wright>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_wleft: powers_wleft {
-            compatible = "zmk,behavior-mod-morph";
-            label = "word left speed";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LEFT)>, <&td_powers_wleft>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_sright: powers_sright {
-            compatible = "zmk,behavior-mod-morph";
-            label = "select right speed";
-            #binding-cells = <0>;
-            bindings = <&kp LS(RIGHT)>, <&td_powers_sright>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_sleft: powers_sleft {
-            compatible = "zmk,behavior-mod-morph";
-            label = "select left speed";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LEFT)>, <&td_powers_sleft>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_sup: powers_sup {
-            compatible = "zmk,behavior-mod-morph";
-            label = "select up speed";
-            #binding-cells = <0>;
-            bindings = <&kp LS(UP)>, <&td_powers_sup>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_sdown: powers_sdown {
-            compatible = "zmk,behavior-mod-morph";
-            label = "select down speed";
-            #binding-cells = <0>;
-            bindings = <&kp LS(DOWN)>, <&td_powers_sdown>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_dright: powers_dright {
-            compatible = "zmk,behavior-mod-morph";
-            label = "delete right speed";
-            #binding-cells = <0>;
-            bindings = <&mt LC(K) LG(D)>, <&td_powers_dright>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        powers_dleft: powers_dleft {
-            compatible = "zmk,behavior-mod-morph";
-            label = "delete left speed";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&td_powers_dleft>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        td_powers_up: td_powers_up {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight UP>, <&tap_sixteen UP>;
-        };
-        td_powers_down: td_powers_down {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight DOWN>, <&tap_sixteen DOWN>;
-        };
-        td_powers_right: td_powers_right {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight RIGHT>, <&tap_sixteen RIGHT>;
-        };
-        td_powers_left: td_powers_left {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight LEFT>, <&tap_sixteen LEFT>;
-        };
-        td_powers_wright: td_powers_wright {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_two LA(RIGHT)>, <&tap_four LA(RIGHT)>;
-        };
-        td_powers_wleft: td_powers_wleft {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_two LA(LEFT)>, <&tap_four LA(LEFT)>;
-        };
-        td_powers_sright: td_powers_sright {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight LS(RIGHT)>, <&tap_sixteen LS(RIGHT)>;
-        };
-        td_powers_sleft: td_powers_sleft {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight LS(LEFT)>, <&tap_sixteen LS(LEFT)>;
-        };
-        td_powers_sup: td_powers_sup {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight LS(UP)>, <&tap_sixteen LS(UP)>;
-        };
-        td_powers_sdown: td_powers_sdown {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight LS(DOWN)>, <&tap_sixteen LS(DOWN)>;
-        };
-        td_powers_dright: td_powers_dright {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight LC(D)>, <&tap_sixteen LC(D)>;
-        };
-        td_powers_dleft: td_powers_dleft {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tap_eight BACKSPACE>, <&tap_sixteen BACKSPACE>;
         };
     };
 
@@ -376,6 +220,20 @@
                 = <&macro_tap &kp LCTRL(DOT) >
                 ;
         };
+        quit: quit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LGUI(Q) >
+                ;
+        };
+        close: close {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LGUI(W) >
+                ;
+        };
 
         tab_search: tab_search {
             compatible = "zmk,behavior-macro";
@@ -391,76 +249,14 @@
                 = <&macro_tap &kp LG(L) &kp STAR &kp SPACE>
                 ;
         };
-        tap_two: tap_two {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>,
-                  <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>
-            ;
-        };
-        tap_four: tap_four {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_param_1to1>, <&tap_two MACRO_PLACEHOLDER>,
-                  <&macro_param_1to1>, <&tap_two MACRO_PLACEHOLDER>
-            ;
-        };
-        tap_eight: tap_eight {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_param_1to1>, <&tap_four MACRO_PLACEHOLDER>,
-                  <&macro_param_1to1>, <&tap_four MACRO_PLACEHOLDER>
-            ;
-        };
-        
-        tap_sixteen: tap_sixteen {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_param_1to1>, <&tap_eight MACRO_PLACEHOLDER>,
-                  <&macro_param_1to1>, <&tap_eight MACRO_PLACEHOLDER>
-            ;
-        };
-        tap_thirtytwo: tap_thirtytwo {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_param_1to1>, <&tap_sixteen MACRO_PLACEHOLDER>,
-                  <&macro_param_1to1>, <&tap_sixteen MACRO_PLACEHOLDER>
-            ;
-        };
-        tap_sixtyfour: tap_sixtyfour {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            wait-ms = <10>;
-            bindings
-                = <&macro_param_1to1>, <&tap_thirtytwo MACRO_PLACEHOLDER>,
-                  <&macro_param_1to1>, <&tap_thirtytwo MACRO_PLACEHOLDER>
-            ;
-        };
 
 
     };
 
         keymap {
                 compatible = "zmk,keymap";
-
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  ' "   |  ,?  |  .! |  p  |  y  |     |  f  |  g   |  c   |  r   | l |
-// |  a     |  o   |  e  |  u  |  i  |     |  d  |  h   |  t   |  n   | s | 
-// |  ;  :  |  q   |  j  |  k  |  x  |     |  b  |  m   |  w   |  v   | z |
-//             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
-                        display-name = "dvorak";
-                        bindings = <
+                display-name = "dvorak";
+                bindings = <
    &kp SQT          &comma_qmark   &dot_excl    &kp P    &kp Y         &kp F    &kp G    &kp C    &kp R   &kp L
    &kp A            &kp O          &kp E        &kp U    &kp I         &kp D    &kp H    &kp T    &kp N   &kp S
    &mt LSHIFT SEMI  &kp Q          &kp J        &kp  K    &kp X        &kp B    &kp M    &kp W    &kp V   &mt RSHIFT Z
@@ -469,11 +265,6 @@
                 };
 
                 qwerty {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
-// |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  t   |  n   | SQT | 
-// |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | DOT |
-//             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
                         display-name = "qwerty";
                         bindings = <
    AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
@@ -484,29 +275,18 @@
                 };
 
 
-
                 nav {
-// -----------------------------------------------------------------------------------------
-// | 1! |  @none |  3# |  4$ |  5% |     |    |  BWD_D    |  UP    |  FWD_D  |    |
-// | -_ |  =+ |  {  |  [  |  (  |     |    |  LEFT     |  DOWN  |  RIGHT  |    |
-// | `~ |     |     |  ,< |  :  |     |    |    | CTRL| META h |      |
-//            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "nav";
                         bindings = <
 
    &kp LS(UP)           &kp LS(LEFT)     &kp LS(RIGHT)    &kp LS(DOWN)   &kp LG(A)               &kp LG(LBKT)     &kp BACKSPACE    &kp UP               &kp RC(D)      &kp RG(RBKT)
    &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  &kp LG(F)               &kp RG(Z)        &kp LEFT         &kp DOWN             &kp RIGHT      &kp RG(RS(Z))
-   &lt 6 LG(LS(C))      &kp LG(X)        &kp LG(C)      &kp LG(V)      &kp LS(LG(V))              &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &lt 6 RG(SLASH)
-                  &bookmark_search    &mt LG(L) LG(T)      &space_groups          &trans   &trans    &trans
+   &kp LG(LS(C))        &kp LG(X)        &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &kp RG(SLASH)
+                                &bookmark_search    &mt LG(L) LG(T)      &groups                 &trans   &trans    &trans
                         >;
                 };
 
                 sym {
-// -----------------------------------------------------------------------------------------
-// | 1! |  @none |  3# |  4$ |  5% |     |    |  BWD_D    |  UP    |  FWD_D  |    |
-// | -_ |  =+ |  {  |  [  |  (  |     |    |  LEFT     |  DOWN  |  RIGHT  |    |
-// | `~ |     |     |  ,< |  :  |     |    |    | CTRL| META h |      |
-//            | GUI | ESC | SPC |     | ENT |     | TAB |
                         display-name = "symbol";
                         bindings = <
 &none          &kp BACKSPACE   &kp  UP         &mt LC(K) LC(D) &kp LG(SLASH)       &mult_slash      &kp LBKT    &kp RBKT    &under_amps    &kp BACKSLASH
@@ -517,11 +297,6 @@
                 };
 
                 num {
-// -----------------------------------------------------------------------------------------
-// | 1! |  @none |  3# |  4$ |  5% |        |    |  BWD_D    |  UP    |  FWD_D  |    |
-// | -_ |  =+    |  {  |  [  |  (  |        |    |  LEFT     |  DOWN  |  RIGHT  |    |
-// | `~ |        |     |  ,< |  :  |        |    |    | CTRL| META h |      |
-//            | GUI | ESC | SPC |           | ENT |     | TAB |
                         display-name = "number";
                         bindings = <
 &none             &kp BACKSPACE   &kp  UP         &mt RC(K) LC(D) &none                   &mt MINUS PLUS  &kp N7       &kp N8       &kp N9       &mt SLASH KP_MULTIPLY
@@ -532,36 +307,16 @@
                 };
 
 
-
                 system {
-// -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | C_MUTE  | C_VOL_DN |  C_Vol_UP | C_BRI_DN | C_BRI_UP |  
-// | BTCLR |     |     |     |     |     |  play   | prev     |  next     |          |          |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
                         display-name = "function";
                         bindings = <
    &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp RC(RA(UP))             &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
    &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP                &mt LG(BACKSLASH) LG(DOT)  &sk  RGUI    &sk RCTRL      &sk RALT     &sk RSHIFT
    &mt LSHIFT GRAVE  &zoom         &kp C_PREV    &kp C_NEXT      &kp C_PP                  &none                      &none        &none          &none        &sk RSHIFT 
-                                &mt LG(Q) LG(W)   &kp LG(M)  &kp TAB                &trans  &trans  &trans
+                                &quit   &close  &kp TAB                &trans  &trans  &trans
                         >;
                 };
 
-                repeat {
-// -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | C_MUTE  | C_VOL_DN |  C_Vol_UP | C_BRI_DN | C_BRI_UP |  
-// | BTCLR |     |     |     |     |     |  play   | prev     |  next     |          |          |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
-                        display-name = "function";
-                        bindings = <
-   &td_powers_sup &td_powers_sleft   &td_powers_sright   &td_powers_sdown  &kp LG(A)              &none            &td_powers_dleft    &td_powers_up           &td_powers_dright  &none
-   &kp LG(LEFT)   &td_powers_wleft   &td_powers_wright   &kp RG(RIGHT)     &kp LG(F)              &kp RG(Z)        &td_powers_left     &td_powers_down         &td_powers_right   &kp RG(RS(Z))
-   &none          &none           &none            &none          &none                           &none            &kp PG_UP        &none                &kp PG_DN       &none
-                                                  &none    &none     &none           &trans   &trans    &trans
-                        >;
-                };
 
         };
 };
