@@ -8,6 +8,25 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
+#include <dt-bindings/zmk/pointing.h>
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
+};
+
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
+};
+
 #define AS(keycode) &as LS(keycode) keycode
 
 / {
@@ -136,9 +155,9 @@
             dvorak: dvorak {
                 display-name = "dvorak";
                 bindings = <
-   &kp SQT          &comma_qmark   &dot_excl    &kp P    &kp Y         &kp F    &kp G    &kp C    &kp R   &kp L
-   &kp A            &kp O          &kp E        &kp U    &kp I         &kp D    &kp H    &kp T    &kp N   &kp S
-   &mt LSHIFT SEMI  &kp Q          &kp J        &kp  K    &kp X        &kp B    &kp M    &kp W    &kp V   &mt RSHIFT Z
+   &kp SQT          &comma_qmark   &dot_excl      &kp P       &kp Y        &kp F    &kp G       &kp C         &kp R      &kp L
+   &kp A            &mt LALT O     &mt LCTRL E    &mt LGUI U  &kp I        &kp D    &mt RGUI H  &mt RCTRL T   &mt RALT N &kp S
+   &mt LSHIFT SEMI  &kp Q          &kp J          &kp K       &kp X        &kp B    &kp M       &kp W         &kp        &mt RSHIFT Z
               &lt 6 ESC   &lt 4 LS(TAB)  &lt 3 SPACE        &lt 2 RET   &lt 5 TAB  &mt LCTRL LG(SPACE)
                         >;
                 };
@@ -160,13 +179,13 @@
 
    &kp LS(UP)           &kp LS(LEFT)     &kp LS(RIGHT)    &kp LS(DOWN)   &kp LG(A)               &kp LG(LBKT)     &kp BACKSPACE    &kp UP               &kp RC(D)      &kp RG(RBKT)
    &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  &kp LG(F)               &kp RG(Z)        &kp LEFT         &kp DOWN             &kp RIGHT      &kp RG(RS(Z))
-   &kp LG(LS(C))        &kp LG(X)        &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &kp RG(SLASH)
-                                &bookmark_search    &mt LG(L) LG(T)      &kp LC(DOT)             &trans   &trans    &trans
+   &kp LG(LS(C))        &kp LG(X)        &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &kp RGUI(DOWN)
+            &bookmark_search    &mt LG(L) LG(T)      &kp LC(LS(A))           &trans   &trans    &trans
                         >;
                 };
 
-            sym: sym {
-                        display-name = "symbol";
+            sym: dev {
+                        display-name = "dev";
                         bindings = <
 &none          &kp BACKSPACE   &kp  UP         &mt LC(K) LC(D) &kp LG(SLASH)       &mult_slash      &kp LBKT    &kp RBKT    &under_amps    &kp BACKSLASH
 &kp LG(Z)      &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(RS(Z))       &minus_plus      &kp LPAR    &kp RPAR    &kp KP_EQUAL   &kp SLASH
@@ -186,22 +205,22 @@
                 };
 
 
-            system: system {
-                        display-name = "function";
+            system: system_right {
+                        display-name = "sytem_right";
                         bindings = <
-   &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp RC(RA(UP))             &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
-   &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP                &mt LG(BACKSLASH) LG(DOT)  &sk  RGUI    &sk RCTRL      &sk RALT     &sk RSHIFT
-   &mt LSHIFT GRAVE  &zoom         &kp C_PREV    &kp C_NEXT      &kp C_PP                  &none                      &none        &none          &none        &sk RSHIFT 
+   &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp RC(RA(UP))                    &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
+   &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP                &mt LG(BACKSLASH) LG(DOT)         &sk  RGUI    &sk RCTRL      &sk RALT     &sk RSHIFT
+   &mt LSHIFT GRAVE  &zoom         &kp C_PREV    &kp C_NEXT      &kp C_PP                  &kp RGUI(RCTRL(RALT(RS(SPACE))))  &none        &none          &none        &sk RSHIFT 
                                             &kp LG(Q)   &kp LG(W)  &kp TAB                &trans  &trans  &trans
                         >;
                 };
 
-            mouse: mouse {
-                        display-name = "mouse";
+            mouse: system_left {
+                        display-name = "system_left";
                         bindings = <
-   &none      &none     &none      &none     &none          &none   &none   &none   &none   &none    
-   &sk LSHIFT &sk LALT  &sk LCTRL  &sk LGUI  &none          &none   &none   &none   &none   &none
-   &kp LSHIFT &none     &none      &none     &none          &none   &none   &none   &none   &none 
+   &none      &none     &none      &none     &none          &none   &mkp LCLK         &mmv MOVE_UP     &mkp RCLK        &none    
+   &sk LSHIFT &sk LALT  &sk LCTRL  &sk LGUI  &kp F11        &none   &mmv MOVE_LEFT    &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &none
+   &kp LSHIFT &none     &none      &none     &none          &none   &msc SCR_UP       &none            &msc SCR_DOWN    &none 
                         &none      &none     &none          &trans  &trans  &trans
                         >;
                 };
