@@ -179,7 +179,7 @@
 
    &kp LS(UP)           &kp LS(LEFT)     &kp LS(RIGHT)    &kp LS(DOWN)   &kp LG(A)               &kp LG(LBKT)     &kp BACKSPACE    &kp UP               &kp RC(D)      &kp RG(RBKT)
    &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  &kp LG(F)               &kp RG(Z)        &kp LEFT         &kp DOWN             &kp RIGHT      &kp RG(RS(Z))
-   &kp LG(LS(C))        &kp LG(X)        &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &kp RGUI(DOWN)
+   &kp LG(LS(C))        &kp LG(X)        &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &kp RG(DOWN)
             &bookmark_search    &mt LG(L) LG(T)      &kp LC(LS(A))           &trans   &trans    &trans
                         >;
                 };
