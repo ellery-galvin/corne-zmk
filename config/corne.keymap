@@ -210,7 +210,7 @@
                         bindings = <
    &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp RC(RA(UP))                    &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
    &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP                &mt LG(BACKSLASH) LG(DOT)         &sk  RGUI    &sk RCTRL      &sk RALT     &sk RSHIFT
-   &mt LSHIFT GRAVE  &zoom         &kp C_PREV    &kp C_NEXT      &kp C_PP                  &kp RG(RC(RA(RS(SPACE))))  &none        &none          &none        &sk RSHIFT 
+   &mt LSHIFT GRAVE  &zoom         &kp C_PREV    &kp C_NEXT      &kp C_PP                  &kp RG(RC(RA(SPACE)))  &none        &none          &none        &sk RSHIFT 
                                             &kp LG(Q)   &kp LG(W)  &kp TAB                &trans  &trans  &trans
                         >;
                 };
