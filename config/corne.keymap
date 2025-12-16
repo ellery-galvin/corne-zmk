@@ -157,7 +157,7 @@
                 bindings = <
    &kp SQT          &comma_qmark   &dot_excl      &kp P       &kp Y        &kp F    &kp G       &kp C         &kp R      &kp L
    &kp A            &mt LALT O     &mt LCTRL E    &mt LGUI U  &kp I        &kp D    &mt RGUI H  &mt RCTRL T   &mt RALT N &kp S
-   &mt LSHIFT SEMI  &kp Q          &kp J          &kp K       &kp X        &kp B    &kp M       &kp W         &kp        &mt RSHIFT Z
+   &mt LSHIFT SEMI  &kp Q          &kp J          &kp K       &kp X        &kp B    &kp M       &kp W         &kp V      &mt RSHIFT Z
               &lt 6 ESC   &lt 4 LS(TAB)  &lt 3 SPACE        &lt 2 RET   &lt 5 TAB  &mt LCTRL LG(SPACE)
                         >;
                 };
