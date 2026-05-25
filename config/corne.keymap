@@ -167,7 +167,7 @@
    AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTRL  &kp RALT  AS(DOT)
         &to 1   &mo 1 &kp SPACE     AS(RET) &mo 2  &to 0
                         >;
-                }
+                };
 
             nav: nav {
                         display-name = "nav";
