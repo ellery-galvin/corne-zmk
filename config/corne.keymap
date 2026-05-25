@@ -174,10 +174,10 @@
                         display-name = "nav";
                         bindings = <
 
-   &kp LS(UP)           &kp LS(LEFT)     &kp LS(RIGHT)    &kp LS(DOWN)   &kp LG(A)               &kp LG(LBKT)     &kp BACKSPACE    &kp UP               &kp RC(D)      &kp RG(RBKT)
-   &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  &kp LG(F)               &kp RG(Z)        &kp LEFT         &kp DOWN             &kp RIGHT      &kp RG(RS(Z))
-   &kp LG(LS(C))        &kp LG(X)        &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &tab_search      &kp PG_UP        &mt LS(LG(R)) LG(R)  &kp PG_DN      &kp RG(SLASH)
-                                &bookmark_search    &mt LG(L) LG(T)      &kp LC(DOT)             &trans   &trans    &trans
+   &kp LS(UP)           &kp LS(LEFT)     &kp LS(RIGHT)    &kp LS(DOWN)   &kp LG(A)               &kp LG(LBKT)     &kp BACKSPACE    &kp UP                 &kp RC(D)      &kp RG(RBKT)
+   &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  &mt LA(LG(F)) LG(F)     &kp RG(Z)        &kp LEFT         &kp DOWN               &kp RIGHT      &kp RG(RS(Z))
+   &kp LG(LS(C))        &kp LG(X)        &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &kp RG(RC(O))      &kp PG_UP        &mt RS(LG(R)) RG(R)  &kp PG_DN      &tab_search
+                                &kp LG(L)    &kp LG(T)    &kp LA(LG(T))                          &trans   &trans    &trans
                         >;
                 };
 
