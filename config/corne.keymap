@@ -155,7 +155,7 @@
    &kp SQT          &comma_qmark   &dot_excl    &kp P    &kp Y         &kp F    &kp G    &kp C    &kp R   &kp L
    &lt_long 8 A            &kp O          &kp E        &kp U    &kp I         &kp D    &kp H    &kp T    &kp N   &lt_long 8 S
    &mt_shift LSHIFT SEMI  &kp Q          &kp J        &kp  K    &kp X        &kp B    &kp M    &kp W    &kp V   &mt_shift RSHIFT Z
-              &lt 6 ESC   &lt 4 LS(TAB)  &lt 3 SPACE        &lt 2 RET   &lt 5 TAB  &mt LCTRL LG(SPACE)
+              &lt 6 ESC   &lt 4 LS(TAB)  &lt 3 SPACE        &lt 2 RET   &lt 5 TAB  &lt 7 LG(SPACE)
                         >;
                 };
 
@@ -236,7 +236,7 @@
    &none      &none     &none      &none     &none          &none   &none   &none   &none   &none    
    &none      &none     &none      &none     &none          &none   &none   &none   &none   &none
    &none      &none     &none      &none     &none          &none   &none   &none   &none   &none 
-                        &none      &kp LG(TAB]  &kp SPACE      &kp RET  &kp TAB  &none
+                        &none      &kp LG(TAB)  &kp SPACE      &kp RET  &kp TAB  &none
                         >;
                 };
         };
