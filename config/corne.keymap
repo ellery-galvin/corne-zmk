@@ -159,7 +159,7 @@
                 display-name = "dvorak";
                 bindings = <
    &kp SQT          &comma_qmark   &dot_excl    &kp P    &kp Y         &kp F    &kp G    &kp C    &kp R   &kp L
-   &kp A            &kp O          &kp E        &kp U    &kp I         &kp D    &kp H    &kp T    &kp N   &lt_long 8 S
+   &kp A            &kp O          &kp E        &kp U    &kp I         &kp D    &kp H    &kp T    &kp N   &kp S
    &mt_shift LSHIFT SEMI  &kp Q          &kp J        &kp  K    &kp X        &kp B    &kp M    &kp W    &kp V   &mt_shift RSHIFT Z
               &lt 6 ESC   &lt 4 LS(TAB)  &lt 3 SPACE        &lt 2 RET   &lt 5 TAB  &lt 7 LG(SPACE)
                         >;
@@ -223,7 +223,7 @@
    &none      &none     &none      &none     &none          &trans   &trans   &trans   &trans   &trans    
    &kp LSHIFT &kp LALT  &kp LCTRL  &kp LGUI  &none          &trans   &trans   &trans   &trans   &trans
    &sk LSHIFT &sk LALT  &sk LCTRL  &sk LGUI  &none          &trans   &trans   &trans   &trans   &trans
-                        &none      &none     &none          &trans  &trans  &trans
+                        &none      &none     &none          &kp RET  &kp TAB  &trans
                         >;
                 };
             modR: modR {
@@ -232,7 +232,7 @@
    &trans  &trans    &trans      &trans     &trans          &none   &none   &none   &none   &none    
    &trans  &trans    &trans      &trans     &trans          &none   &kp RGUI  &kp RCTRL    &kp RALT   &kp RSHIFT
    &trans  &trans    &trans      &trans     &trans          &none   &sk RGUI  &sk RCTRL    &sk RALT   &sk RSHIFT
-                        &trans   &trans     &trans          &trans  &trans  &trans
+                        &trans   &kp LG(TAB)   &kp SPACE       &trans  &trans  &trans
                         >;
                 };
             thumb_repeat: thumb_repeat {
