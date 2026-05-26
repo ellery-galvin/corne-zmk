@@ -27,7 +27,7 @@
         lt_long: lt_long {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <240>;
+            tapping_term_ms = <250>;
             quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
@@ -35,10 +35,16 @@
         mt_shift: mt_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <240>;
+            tapping_term_ms = <250>;
             quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
+        };
+        td_find_replace: td_find_replace {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp F>, <&kp LA(LG(F))>;
         };
         cmd_alt: cmd_alt {
             compatible = "zmk,behavior-mod-morph";
@@ -174,7 +180,7 @@
                         bindings = <
 
    &kp LS(UP)           &kp LS(LEFT)     &kp LS(RIGHT)    &kp LS(DOWN)   &kp LG(A)               &kp LG(LBKT)     &kp BACKSPACE    &kp UP                 &kp RC(D)      &kp RG(RBKT)
-   &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  &mt LA(LG(F)) LG(F)     &kp RG(Z)        &kp LEFT         &kp DOWN               &kp RIGHT      &kp RG(RS(Z))
+   &kp LG(LEFT)         &kp RA(LEFT)     &kp RA(RIGHT)    &kp RG(RIGHT)  @td_find_replace         &kp RG(Z)        &kp LEFT         &kp DOWN               &kp RIGHT      &kp RG(RS(Z))
    &kp LG(LS(C))        &kp LG(X)        &kp LG(C)        &kp LG(V)      &kp LS(LG(V))           &kp RG(RC(O))      &kp PG_UP        &mt RS(LG(R)) RG(R)  &kp PG_DN      &kp RS(RG(A))
                                 &kp LG(L)    &kp LG(T)    &kp LC(LG(C))                          &trans   &trans    &trans
                         >;
