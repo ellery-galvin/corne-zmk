@@ -27,7 +27,7 @@
         lt_long: lt_long {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping_term_ms = <250>;
+            tapping_term_ms = <300>;
             quick_tap_ms = <0>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
