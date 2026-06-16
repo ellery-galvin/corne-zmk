@@ -213,7 +213,7 @@
    &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR                  &kp RC(RA(UP))             &mt LG(LC(LA(LEFT))) LC(LA(LEFT)) &kp  LC(LA(RET))    &mt LG(LC(LA(RIGHT))) LC(LA(RIGHT))   &kp RC(RA(DOWN))    
    &kp C_MUTE        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_DN  &kp C_BRI_UP                &mt LG(BACKSLASH) LG(DOT)  &kp  RGUI    &kp RG(RC(RA(S)))    &zoom      &kp RG(RC(RA(D)))
    &kp GRAVE         &kp LG(M)     &kp C_PREV    &kp C_NEXT      &kp C_PP                  &kp RG(RC(S))              &kp  RG(S)   &kp RG(N)      &kp RS(RG(N))    &kp RSHIFT
-                                            &kp LG(Q)   &kp LG(W)  &kp TAB                &trans  &trans  &trans
+                                            &kp Q   &kp W  &kp TAB                &trans  &trans  &trans
                         >;
                 };
 
@@ -229,19 +229,10 @@
             modR: modR {
                         display-name = "modR";
                         bindings = <
-   &trans  &trans    &trans      &trans     &trans          &none   &none   &none   &none   &none    
-   &trans  &trans    &trans      &trans     &trans          &none   &kp RGUI  &kp RCTRL    &kp RALT   &kp RSHIFT
-   &trans  &trans    &trans      &trans     &trans          &none   &sk RGUI  &sk RCTRL    &sk RALT   &sk RSHIFT
-                        &trans   &kp LG(TAB)   &kp SPACE       &trans  &trans  &trans
-                        >;
-                };
-            thumb_repeat: thumb_repeat {
-                        display-name = "thumb repeat";
-                        bindings = <
-   &none      &none     &none      &none     &none          &none   &none   &none   &none   &none    
-   &none      &none     &none      &none     &none          &none   &none   &none   &none   &none
-   &none      &none     &none      &none     &none          &none   &none   &none   &none   &none 
-                        &none      &kp LG(TAB)  &kp SPACE      &kp RET  &kp TAB  &none
+   &trans        &trans    &trans      &trans     &trans          &none   &none   &none   &none   &none    
+   &trans        &trans    &trans      &trans     &trans          &none   &kp RGUI  &kp RCTRL    &kp RALT   &kp RSHIFT
+   &kp GRAVE     &trans    &trans      &trans     &trans          &none   &sk RGUI  &sk RCTRL    &sk RALT   &sk RSHIFT
+                        &kp Q   &kp TAB   &kp SPACE       &trans  &trans  &trans
                         >;
                 };
         };
